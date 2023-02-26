@@ -23,11 +23,11 @@
 
 
 
-**Baseline Results:**
+### Back Propagation Results
 
-Test Accuracy : 0.9180
+**Test Accuracy** : 0.9180
 
-Classification Report :               
+**Classification Report** :               
 
 |					|precision |   recall|  f1-score |  support|        
 | ---  | ---  | ---  | ---  | ---  |
@@ -39,7 +39,7 @@ Classification Report :
 |macro avg    |   0.92    |  0.92    |  0.92   |   7600 |
 |weighted avg  |     0.92  |    0.92   |   0.92   |   7600  |
 
-Confusion Matrix :  
+**Confusion Matrix** :  
 
 [[1736   29   92   43] 
 
@@ -51,4 +51,43 @@ Confusion Matrix :
 
 
 
-<img src="image/baseline_conf_matrix.png" alt="baseline_conf_matrix" style="zoom:60%;" />
+<img src="image/baseline_conf_matrix.png" alt="baseline_conf_matrix" style="zoom:70%;" />
+
+### Forward-forward Results
+
+- Positive Samples: subsitute first 4 entries with dummy labels in each 300-d embeddings
+
+- Negative Samples: subsitute first 4 entries with random *wrong* dummy labels in each 300-d embeddings
+
+- each layer: epoch = 1000
+
+
+
+**Test Accuracy** : 0.8871
+
+**Classification Report** :               
+
+||dprecision   | recall  |f1-score |  support      |  
+|---|---|---|---|---|
+|World    |   0.92   |   0.87    |  0.89    | 28437 |     
+|Sports     |  0.94    |  0.97    |  0.95  |   28562    |
+|Business  |     0.83   |   0.87   |   0.85    | 28499    |
+|Sci/Tech     |  0.87    |  0.84   |   0.85   |  28502   |  
+|accuracy        |             |      |0.89  |  114000   |
+|macro avg     |  0.89  |    0.89    |  0.89  |  114000 |
+|weighted avg   |    0.89    |  0.89   |   0.89  |  114000  |
+
+
+
+**Confusion Matrix** :  
+
+[[24615  1029  1779  1014]
+
+ [  365 27776   231   190]
+
+ [  839   395 24904  2361] 
+
+[  946   465  3251 23840]]
+
+<img src="image/ffa.png" alt="ffa" style="zoom:70%;" />
+

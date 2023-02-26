@@ -4,8 +4,8 @@
 
 **Data Set**: AG News
 
-- Training: 30,000 news articles
-- Testing: 1,900 news articles
+- Training: 12,000 news articles
+- Testing: 7,600 news articles
 
 **Task**: Text Classification
 

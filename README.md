@@ -45,7 +45,7 @@
 
 ==FFA: each layer's epoch = 1000, maybe should try sth higher | BP epoch 25==
 
-### Embedding - Acc
+### Corruption - Acc
 
 **Setting:**
 

@@ -1,6 +1,6 @@
 # Forward-forward-NLP
 
-## Background
+# Background
 
 **Task**: Text Classification
 
@@ -30,7 +30,7 @@
 
 - Data set: AG News
 
-- Corruption: insert
+- Corruption: **insert**
 
 - Goodness: Sum of square
 
@@ -41,9 +41,9 @@
 |            | FFA-train | FFA-test | BP-train | BP-test |
 | ---------- | --------- | -------- | -------- | ------- |
 | GloVe(300) | 88.71%    | 88.71%   | 97.9%    | 91.6%   |
-| sbert(384) | 67.94%    | 67.84%   | 93.5%    | 74.5%   |
+| sbert(384) | 89.09%    | 89.09%   |          |         |
 
-==FFA: each layer's epoch = 1000, maybe should try sth higher | BP epoch 25==
+
 
 ### Corruption - Acc
 
@@ -51,7 +51,7 @@
 
 - Data set: AG News
 
-- Embedding: GloVe
+- Embedding: **sbert**
 
 - Goodness: Sum of square
 
@@ -61,8 +61,8 @@
 
 | Corruption  | FFA-train | FFA-test | BP-train | BP-test |
 | ----------- | --------- | -------- | -------- | ------- |
-| Insert      | 88.71%    | 88.71%   | 97.9%    | 91.6%   |
-| Concatenate | 89.02%    | 89.02%   | /        | /       |
+| Insert      | 89.09%    | 89.09%   |          |         |
+| Concatenate | 89.16%    | 89.16%   | /        | /       |
 
 
 

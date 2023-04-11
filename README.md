@@ -66,3 +66,20 @@
 
 
 
+### Goodness - Acc
+
+**Setting:**
+
+- Data set: AG News
+- Embedding: sbert
+- Negative Samples: positive data + random label
+
+**Results:**
+
+| Corruption            | FFA-train | FFA-test | BP-train | BP-test |
+| --------------------- | --------- | -------- | -------- | ------- |
+| Square                | 89.16%    | 89.16%   | 98.2%    | 91.3%   |
+| Cube                  | 91.71%    | 91.71%   | /        | /       |
+| Absolute              | 25.03%    | 25.03%   | /        | /       |
+| Half square half cube | 91.37%    | 91.37%   | /        | /       |
+|                       |           |          | /        | /       |

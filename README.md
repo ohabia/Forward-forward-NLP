@@ -1,5 +1,7 @@
 # Forward-forward-NLP
 
+diff dataset and goodness function
+
 # Background
 
 **Task**: Text Classification
@@ -41,7 +43,7 @@
 |            | FFA-train | FFA-test | BP-train | BP-test |
 | ---------- | --------- | -------- | -------- | ------- |
 | GloVe(300) | 88.71%    | 88.71%   | 97.9%    | 91.6%   |
-| sbert(384) | 89.09%    | 89.09%   | 98.2%    | 91.3%   |
+| sbert(384) | 89.09%    | 89.09%   | 98.51%   | 91.34%  |
 
 
 
@@ -61,7 +63,7 @@
 
 | Corruption  | FFA-train | FFA-test | BP-train | BP-test |
 | ----------- | --------- | -------- | -------- | ------- |
-| Insert      | 89.09%    | 89.09%   | 98.2%    | 91.3%   |
+| Insert      | 89.09%    | 89.09%   | 98.51%   | 91.34%  |
 | Concatenate | 89.16%    | 89.16%   | /        | /       |
 
 
@@ -71,15 +73,29 @@
 **Setting:**
 
 - Data set: AG News
+- Corruption: concatenate
 - Embedding: sbert
 - Negative Samples: positive data + random label
 
 **Results:**
 
-| Corruption            | FFA-train | FFA-test | BP-train | BP-test |
-| --------------------- | --------- | -------- | -------- | ------- |
-| Square                | 89.16%    | 89.16%   | 98.2%    | 91.3%   |
-| Cube                  | 91.71%    | 91.71%   | /        | /       |
-| Absolute              | 25.03%    | 25.03%   | /        | /       |
-| Half square half cube | 91.37%    | 91.37%   | /        | /       |
-|                       |           |          | /        | /       |
+| BP-train | BP-test |
+| :------: | :-----: |
+|  98.51%  | 91.34%  |
+
+
+
+| Goodness Function              | FFA-train   | FFA-test    | Train_loss                                                   |
+| ------------------------------ | ----------- | ----------- | ------------------------------------------------------------ |
+| sqrt                           | 24.97%      | 24.97%      | <img src="../../Library/Application Support/typora-user-images/image-20230416180808372.png" alt="image-20230416180808372" style="zoom:50%;" /> |
+| Absolute                       | 25.03%      | 25.03%      | <img src="../../Library/Application Support/typora-user-images/image-20230416182938629.png" alt="image-20230416182938629" style="zoom:50%;" /> |
+| Power(2)                       | 89.23%      | 89.23%      | <img src="../../Library/Application Support/typora-user-images/image-20230416152310710.png" alt="image-20230416152310710" style="zoom:50%;" /> |
+| Power(3)                       | 91.99%      | 91.99%      | <img src="../../Library/Application Support/typora-user-images/image-20230416155254864.png" alt="image-20230416155254864" style="zoom:50%;" /> |
+| Power(4)                       | 93.23%      | 93.23%      | <img src="../../Library/Application Support/typora-user-images/image-20230416160805970.png" alt="image-20230416160805970" style="zoom:50%;" /> |
+| Power(4.2)                     | 93.32%      | 93.32%      | <img src="../../Library/Application Support/typora-user-images/image-20230416191138833.png" alt="image-20230416191138833" style="zoom:50%;" /> |
+| Power(5)/Power(4.5)/Power(4.3) | 24.99%(nan) | 24.99%(nan) | <img src="../../Library/Application Support/typora-user-images/image-20230416164222144.png" alt="image-20230416164222144" style="zoom:50%;" /> |
+| Power(6)                       | 24.99%(nan) | 24.99%(nan) | <img src="../../Library/Application Support/typora-user-images/image-20230416174026154.png" alt="image-20230416174026154" style="zoom:50%;" /> |
+|                                |             |             |                                                              |
+
+
+

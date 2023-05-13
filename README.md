@@ -1,6 +1,32 @@
 # Forward-forward-NLP
 
-diff dataset and goodness function
+## Different Dataset(small) experiments
+
+Train data: 1000 
+
+Test data: 600
+
+```python
+# embedding method
+EMBD = 'sbert' # choose from 'GloVe' or 'sbert'
+# Corruption: if not then concatnate
+INSERT = False 
+# goodness function
+def goodness(X):
+  return goodness_power(X,4.3)
+```
+
+| DATASET            | FFA Acc | BP Acc |
+| ------------------ | ------- | ------ |
+| AG_NEWS            | 94.11%  | 27.67% |
+| AmazonReviewFull   | 74.00%  | 19.67% |
+| DBpedia            | 100%    | 100%   |
+| IMDb               | 100%    | 100%   |
+| YahooAnswers       | 72.84%  | 22.3%  |
+| YelpReviewFull     | 74.21%  | 30.83% |
+| YelpReviewPolarity | 100%    | 74.83% |
+
+
 
 # Background
 
